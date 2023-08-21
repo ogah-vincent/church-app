@@ -1,0 +1,67 @@
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center; /* Center align content horizontally */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: inline-block; /* Display content inline */
+    text-align: left; /* Align content to the left */
+  }
+  
+  .footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block; /* Display the logo inline */
+    vertical-align: middle; /* Vertically align the logo */
+  }
+  
+  .footer-logo img {
+    max-width: 100px; /* Adjust this value to your preferred width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .footer-links {
+    display: inline-block; /* Display links inline */
+    margin-left: 20px; /* Add spacing between sections */
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .footer-social {
+    display: inline-block; /* Display social icons inline */
+    margin-left: 20px; /* Add spacing between sections */
+  }
+  
+  .footer-social a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .social-icon1{
+    background-color: #4267b2;
+    border-radius:4px;
+  }
+
+  .social-icon2{
+    background-color: #00ACEE;
+    border-radius:4px;
+  }
+
+  .social-icon3{
+    background-color: #d62976;
+    border-radius:4px;
+  }

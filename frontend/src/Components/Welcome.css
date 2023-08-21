@@ -1,0 +1,52 @@
+.welcome-message-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome-text {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    display: block;
+    margin-right: 40px;
+  }
+
+  .welcome-text:hover {
+    transition: background 0.5s;
+    transform: scale(1.1);
+    background-color: grey;
+  }
+  
+  .welcome-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-text p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .welcome-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    display: block;
+  }
+  
+  .welcome-image img:hover{
+    transform: scale(1.1);
+    transition: background 0.5s;
+  }
+
+  

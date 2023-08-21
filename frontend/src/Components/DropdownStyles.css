@@ -1,0 +1,16 @@
+/* DropdownStyles.css */
+
+/* Apply styles to the dropdown options */
+.dropdown-option {
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  /* Apply different styles when the dropdown is opened */
+  .dropdown-open .dropdown-option {
+    background-color: #ccc;
+    color: #fff;
+  }
+  
