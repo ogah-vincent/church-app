@@ -5,29 +5,39 @@ class DropdownComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: ''
+      isDropdownOpen: false,
+      selectedOption: '',
     };
   }
 
-  handleOptionChange = event => {
+  handleOptionChange = (event) => {
     this.setState({ selectedOption: event.target.value });
   };
 
+  handleDropdownMouseEnter = () => {
+    this.setState({ isDropdownOpen: true });
+  };
+
+  handleDropdownMouseLeave = () => {
+    this.setState({ isDropdownOpen: false });
+  };
+
   render() {
-    const { selectedOption } = this.state;
+    const { isDropdownOpen, selectedOption } = this.state;
     const options = this.props.options;
 
     return (
-      <div className={selectedOption ? 'dropdown-open' : ''}>
-        <select
-          value={selectedOption}
-          onChange={this.handleOptionChange}
-        >
+      <div
+        className={`dropdown-container ${isDropdownOpen ? 'open' : ''}`}
+        onMouseEnter={this.handleDropdownMouseEnter}
+        onMouseLeave={this.handleDropdownMouseLeave}
+      >
+        <select value={selectedOption} onChange={this.handleOptionChange}>
           {options.map((option, index) => (
             <option
               key={index}
               value={option.value}
-              className="dropdown-option" // Apply custom styles to each option
+              className="dropdown-option"
             >
               {option.label}
             </option>

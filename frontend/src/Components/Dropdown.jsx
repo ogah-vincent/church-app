@@ -7,23 +7,27 @@ const Option = ({ href, text }) => (
 );
 
 const Dropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   return (
-    <span className="dropdown" onClick={toggleDropdown}>
+    <span className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <a href="#" aria-haspopup="true" aria-expanded={isOpen ? 'true' : 'false'}>
+      <a href="#" aria-haspopup="true" aria-expanded={isHovered ? 'true' : 'false'}>
         Departments
       </a>
-      {isOpen && (
+      {isHovered && (
         <div className="dropdown-content" style={{ position: 'relative' }}>
-          <Option href="https://www.docplanner.com/department?dep=marketing" text="Chior" />
+          <Option href="https://www.docplanner.com/department?dep=marketing" text="Choir" />
           <Option href="https://www.docplanner.com/department?dep=customer" text="Usher" />
-          <Option href="https://www.docplanner.com/department?dep=it" text="Evengalism" />
+          <Option href="https://www.docplanner.com/department?dep=it" text="Evangelism" />
           <Option href="https://www.docplanner.com/department?dep=finance" text="Sanitation" />
           <Option href="https://www.docplanner.com/department?dep=hr" text="Welfare" />
         </div>

@@ -1,16 +1,45 @@
 /* DropdownStyles.css */
 
-/* Apply styles to the dropdown options */
+/* Styling for the dropdown container */
+.dropdown-container {
+  position: relative; /* This is important for positioning the dropdown options */
+  width: 200px; /* Adjust the width as needed */
+}
+
+/* Styling for the dropdown container when it's open on hover */
+.dropdown-container.open {
+  /* Add your styles for the open state here */
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the dropdown options */
 .dropdown-option {
-    font-size: 16px;
-    padding: 5px 10px;
-    background-color: #f0f0f0;
-    color: #333;
-  }
+  /* Add your styles for the dropdown options here */
+  padding: 8px;
+  background-color: #fff;
+}
+
+/* Styling for the dropdown options on hover */
+.dropdown-option:hover {
+  /* Add your styles for the hover state here */
+  background-color: #f0f0f0;
+}
+
+.dropdown a{
+  text-decoration: none; 
   
-  /* Apply different styles when the dropdown is opened */
-  .dropdown-open .dropdown-option {
-    background-color: #ccc;
-    color: #fff;
-  }
-  
+}
+
+.dropdown a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+

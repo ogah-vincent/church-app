@@ -10,6 +10,10 @@ import NotFound from "./Components/NotFound";
 import Carousel from './Components/Carousel';
 import DropdownComponent from './Components/DropdownComponent';
 import Footer from "./Components/Footer";
+import PaymentSuccess from "./Components/PaymentSuccess";
+import Welcome from "./Components/Welcome";
+import MapContainer from "./Components/MapContainer";
+
 import './App.css';
 
 const App = () => {
@@ -25,8 +29,9 @@ const App = () => {
     <Router>
       <div className="App background-image">
         <Navbar />
-
         <Routes>
+        <Route path="/" exact component={OnlineGiving} />
+        <Route path="/success" component={PaymentSuccess} />
           <Route path="/" element={<Home />} />
           <Route path="/" exact component={DropdownComponent} />
           <Route path="/about" element={<About />} />
@@ -36,7 +41,9 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
 
+         <Welcome />
         <Carousel images={images} />
+        <MapContainer />
         <Footer />
       </div>
     </Router>
